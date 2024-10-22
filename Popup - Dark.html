@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Youtube Transcript Summarizer</title>
+    <style>
+        body {
+            width: max-content;
+            max-width: 800px;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #e1e1e1; /* YouTube red */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #bbb;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #e53935; /* YouTube red */
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c62828; /* Darker red */
+        }
+
+        button:disabled {
+            background-color: #555; /* Dark gray */
+            cursor: not-allowed;
+        }
+
+        p {
+            font-size: 16px;
+            color: #bbb;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div style="text-align:center">
+        <img src="youtube_icon.svg" alt="YouTube Icon" width="100" height="100">
+    </div>
+    <h1>Youtube Transcript Summarizer</h1>
+    <label for="max_length">Max Length:</label>
+    <input type="number" id="max_length" name="max_length" value="100">
+    <br><br>
+    <button id="summarize" type="button">Summarize</button>
+    <br/>
+    <p id="output"></p>
+    <script src="Popup.js"></script>
+</body>
+</html>
